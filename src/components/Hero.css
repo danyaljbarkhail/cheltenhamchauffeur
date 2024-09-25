@@ -1,0 +1,144 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/public/images/hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push title up and buttons down */
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent font with navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure it takes full height for vertical alignment */
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 90px; /* Adjust this as necessary */
+  margin-bottom: 10px; /* Add a small margin to create space between the title and subtitle */
+  color: #ff4747;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+  /* Add animation for smooth entrance */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 1s ease-out forwards;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  margin-top: 0; /* Set to 0 to bring it closer to the title */
+  text-align: center;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: auto; /* Push buttons to the bottom */
+  margin-bottom: 50px; /* Adjusted to give space at the bottom */
+}
+
+.btn-cta {
+  padding: 12px 30px;
+  border: 2px solid #ff4747;
+  background-color: transparent;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif; /* Ensure buttons also use Poppins font */
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1.5s ease-out forwards; /* Button fade-in effect */
+  animation-delay: 0.5s; /* Add a delay to make the buttons appear after the title */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-cta:hover {
+  background-color: #ff4747;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide-in animation for title */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Slide to its normal position */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 20px;
+    justify-content: flex-start; /* Push content up on mobile */
+    height: auto; /* Ensure content doesn't stretch the full height */
+  }
+
+  .hero-title {
+    font-size: 2.5rem; /* Smaller title on mobile */
+    margin-top: 50px; /* Adjusted for mobile */
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+    margin-top: 200px; /* Push buttons to the bottom of the section */
+    margin-bottom: 30px; /* Ensure space at the bottom */
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

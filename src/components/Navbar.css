@@ -1,0 +1,238 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Main Navbar for Desktop */
+.navbar-main {
+  background-color: #1e1e2d;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  transition: background-color 0.3s ease;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Fixed Navbar only on Desktop */
+@media (min-width: 992px) {
+  .navbar-main.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Hide mobile menu on desktop */
+  .mobile-menu {
+    display: none !important;
+  }
+
+  /* Ensure the navbar collapse is shown normally on desktop */
+  .navbar-main .navbar-collapse {
+    display: flex !important;
+  }
+}
+
+/* Mobile Navbar */
+@media (max-width: 992px) {
+  .navbar-main {
+    position: relative;
+  }
+
+  /* Collapse the navbar by default on mobile */
+  .navbar-main .navbar-collapse {
+    display: none; /* Hide initially on mobile */
+  }
+
+  /* Ensure the navbar shows when toggled */
+  .navbar-main .navbar-collapse.show {
+    display: block !important; /* Show the menu when opened */
+    background-color: #1e1e2d; /* Ensure background color matches */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 20px;
+  }
+
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Logo and Slogan */
+.navbar-logo {
+  width: 150px;
+}
+
+.navbar-slogan {
+  font-size: 1rem;
+  color: #ff4747;
+  margin-left: 10px;
+  margin-right: 50px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add fade and scale on hover */
+}
+
+.navbar-slogan:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  opacity: 0.9;
+}
+
+/* Burger Icon and Close Icon */
+.burger-icon, .close-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: block; /* Ensure icons are visible */
+  z-index: 1001; /* Ensure they appear above other content */
+  transition: transform 0.3s ease; /* Add smooth scaling animation */
+}
+
+.burger-icon:hover, .close-icon:hover {
+  transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+/* Mobile Navbar Toggler */
+.navbar-toggler {
+  display: block; /* Ensure the toggler is visible */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001; /* Bring to front */
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none; /* Hide the burger icon on larger screens */
+  }
+}
+
+/* Navigation Links */
+.nav-link {
+  color: white !important;
+  font-size: 1rem;
+  margin-right: 20px;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and hover effect */
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background-color: #ff4747;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #ff4747 !important;
+  transform: translateY(-3px); /* Subtle upward movement on hover */
+}
+
+/* Right Section - Book A Ride */
+.navbar-right {
+  margin-left: auto;
+}
+
+.book-ride-btn {
+  background-color: transparent;
+  border: 2px solid #ff4747;
+  color: #ff4747;
+  padding: 5px 15px;
+  transition: background-color 0.6s ease, color 0.6s ease, transform 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.book-ride-btn:hover {
+  background-color: #ff4747;
+  color: white;
+  transform: translateY(-2px) scale(1.05); /* Slight upward movement and enlarge on hover */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.mobile-nav-link {
+  font-size: 1.5rem;
+  color: white !important;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #ff4747 !important;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.mobile-book-ride-btn {
+  width: 80%;
+  background-color: #ff4747;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.mobile-book-ride-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar-slogan {
+    display: none;
+  }
+
+  .burger-icon, .close-icon {
+    font-size: 30px;
+    color: white;
+  }
+
+  .book-ride-btn {
+    margin-top: 10px;
+  }
+}

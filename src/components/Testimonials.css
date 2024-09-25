@@ -1,0 +1,116 @@
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #1e1e2d;
+    color: white;
+    text-align: center;
+  }
+  
+  .testimonials-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Title */
+  .testimonials-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  .title-main {
+    color: white;
+  }
+  
+  .title-highlight {
+    color: #ff4747;
+    font-weight: 600;
+  }
+  
+  /* Swiper */
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  /* Testimonial Card */
+.testimonial-card {
+    background-color: #2c2c3d;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Profile Icon */
+  .profile-icon {
+    margin-bottom: 15px;
+    color: #ff4747; /* Use the website’s red color for icons */
+  }
+  
+  .profile-icon i {
+    font-size: 3rem;
+  }
+  
+  /* Name */
+  .testimonial-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Rating */
+  .testimonial-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-rating .fas {
+    color: #ff4747;
+    margin-right: 5px;
+  }
+  
+  .testimonial-rating .filled {
+    color: #ff4747;
+  }
+  
+  .testimonial-rating span {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Comment */
+  .testimonial-comment {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Swiper navigation and pagination */
+  .swiper-button-next, .swiper-button-prev {
+    color: white;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #ff4747;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #ff4747;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-card {
+      width: 90%;
+    }
+  }
+  

@@ -1,0 +1,246 @@
+/* General Fleet Section */
+.fleet-section {
+  padding: 100px 20px;
+  background-color: #1e1e2d;
+  color: white;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.fleet-title, .pricing-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.title-main {
+  color: white;
+}
+
+.title-highlight {
+  color: #ff4747;
+  font-weight: 600;
+}
+
+/* Fleet Item Layout */
+.fleet-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+
+.fleet-item:hover {
+  transform: scale(1.03);
+}
+
+.fleet-image-container {
+  flex: 1;
+  max-width: 45%;
+  margin-right: 40px;
+}
+
+.fleet-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.fleet-details-container {
+  flex: 1;
+}
+
+.fleet-class-title {
+  font-size: 2.5rem;
+  color: #ff4747;
+  margin-bottom: 20px;
+}
+
+.fleet-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.fleet-capacity {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fleet-capacity i {
+  color: #ff4747;
+  margin-right: 10px;
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 60px 20px;
+  background-color: #292a39;
+  color: white;
+}
+
+.pricing-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.pricing-table {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricing-header, .pricing-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-header {
+  font-weight: bold;
+  color: #ff4747;
+}
+
+.pricing-destination, .pricing-standard-class, .pricing-e-class, .pricing-s-class, .pricing-v-class, .pricing-courier-services {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px; /* Added padding to create space between columns */
+}
+
+.pricing-row {
+  font-size: 1.2rem;
+}
+
+/* Additional Pricing Table Design */
+.additional-pricing-table {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.additional-pricing-table h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ff4747;
+}
+
+.pricing-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px 10px; /* Added more padding for spacing */
+}
+
+.pricing-table th {
+  background-color: #ff4747;
+  color: white;
+}
+
+.pricing-table td {
+  background-color: #292a39;
+  color: white;
+}
+
+.pricing-table tr:nth-child(even) {
+  background-color: #33344a;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .fleet-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fleet-image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 90%;
+  }
+
+  .fleet-image {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .fleet-class-title {
+    font-size: 2rem;
+  }
+
+  .fleet-description {
+    font-size: 1rem;
+  }
+
+  /* Mobile Adjustments for Pricing Table */
+  .pricing-header {
+    display: none;
+  }
+
+  .pricing-row {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .pricing-row .pricing-destination {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .pricing-row .pricing-standard-class::before {
+    content: 'Standard Price: ';
+    font-weight: bold;
+    color: #ff4747;
+  }
+
+  .pricing-row .pricing-e-class::before {
+    content: 'E Class Price: ';
+    font-weight: bold;
+    color: #ff4747;
+  }
+
+  .pricing-row .pricing-s-class::before {
+    content: 'S Class Price: ';
+    font-weight: bold;
+    color: #ff4747;
+  }
+
+  .pricing-row .pricing-v-class::before {
+    content: 'V Class Price: ';
+    font-weight: bold;
+    color: #ff4747;
+  }
+
+  .pricing-row .pricing-courier-services::before {
+    content: 'Courier Services Price: ';
+    font-weight: bold;
+    color: #ff4747;
+  }
+
+  .pricing-row {
+    margin-bottom: 20px; /* Add spacing between each row for better readability on mobile */
+  }
+}

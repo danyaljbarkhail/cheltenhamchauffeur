@@ -1,0 +1,129 @@
+/* Booking Page Main Container */
+.booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from center to flex-start */
+  min-height: 100vh;
+  background-color: #1e1e2d; /* Dark background */
+  color: white;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Same font as other sections */
+  padding-top: 100px; /* Extra padding to prevent overlap */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Booking Box Styling */
+.booking-box {
+  background-color: #262638; /* Slightly lighter dark */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  max-width: 700px; /* Wider container for a more spacious form */
+  width: 100%;
+}
+
+/* Title and Logo Styling */
+.booking-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ff4747; /* Accent color */
+  text-align: center;
+}
+
+/* Logo Styling */
+.booking-logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 250px; /* Adjust size of logo */
+}
+
+/* Form Styling */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input and Select Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #ff4747;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #2d2d3a;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #ff4747;
+  outline: none;
+  box-shadow: 0px 4px 8px rgba(255, 71, 71, 0.3); /* Red glow */
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Button Styling */
+.btn-booking {
+  padding: 12px 20px;
+  background-color: #ff4747;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-booking:hover {
+  background-color: #e33b3b;
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(255, 71, 71, 0.4); /* Hover lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-box {
+    padding: 20px;
+  }
+
+  .booking-title {
+    font-size: 2rem;
+  }
+
+  .btn-booking {
+    font-size: 1rem;
+  }
+}

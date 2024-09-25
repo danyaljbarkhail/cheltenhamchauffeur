@@ -1,0 +1,32 @@
+.footer {
+    background-color: #1e1e2d;
+    color: white;
+    padding: 10px 0; /* Reduced padding to decrease footer height */
+    text-align: left;
+  }
+  
+  .footer h5 {
+    color: #ff4747;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ff4747;
+  }
+  
+  .terms-link {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .terms-link:hover {
+    color: #ff4747;
+  }
+  
