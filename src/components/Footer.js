@@ -11,7 +11,7 @@ const Footer = () => {
         <Row>
           <Col md={4}>
             <h5>Contact Us</h5>
-            <p>Phone: 07411 736020</p>
+            <p>Phone: 07733 954646</p>
             <p>Email: <a href="mailto:info@cheltenhamchauffeur.co.uk" className="text-white">info@cheltenhamchauffeur.co.uk</a></p>
           </Col>
           <Col md={4}>
