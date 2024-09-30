@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="hero-section" id="home">
       <div className="overlay"></div>
       <div className="hero-content">
-        <h1 className="hero-title">Cheltenham Chauffeurs</h1> {/* Keeping the latest version with <h1> */}
+        <h1 className="hero-title">Cheltenham Chauffeur</h1> {/* Keeping the latest version with <h1> */}
         <h2 className="subtitle">Travel Executive Class</h2>
 
         {/* CTA Buttons */}
