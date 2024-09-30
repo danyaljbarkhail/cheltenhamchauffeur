@@ -61,7 +61,7 @@ const Contact = () => {
           <div className="contact-info">
             <div className="contact-item">
               <i className="fas fa-phone-alt"></i>
-              <a href="tel:+447411736020">Phone <br /><span>07411 736020</span></a>
+              <a href="tel:+447733954646">Phone <br /><span>07733 954646</span></a>
             </div>
 
             <div className="contact-item">
